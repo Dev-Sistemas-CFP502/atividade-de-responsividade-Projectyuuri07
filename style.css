@@ -9,7 +9,6 @@
 }
 
 body {
-
   font-family: Arial, Helvetica, sans-serif;
   background-color: #111;
   padding: 1rem;
@@ -121,11 +120,12 @@ p {
 }
 
 .vantagens-titulo{
+  display: flex;
   font-size: 3rem;
   letter-spacing: 2px;
   background: url(./img/onda.svg);
   color: #ffbb00;
-
+  
 }
 
 .vantagens-lista{
@@ -155,11 +155,10 @@ p {
   font-size: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     menu ul{
       flex-direction: column;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       padding: 1rem;
@@ -172,6 +171,7 @@ p {
 
     .conteudo, .introducao-img{
       padding: 1rem;
+      overflow-x: auto;
     }
 
     .introducao-img img{
@@ -188,7 +188,11 @@ p {
     }
 
     .introdução h2, .header, .vantagens-titulo{
-      font-size: 20px;
-      
+      font-size: 28px;
+      justify-content: center;
+      padding: 1rem;
+    }
+    body{
+      display: block;
     }
 }
