@@ -30,8 +30,10 @@ p {
 
 .menu ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  align-items: center;
   margin: 2rem;
 }
 
@@ -50,6 +52,7 @@ p {
 
 .conteudo {
   display: flex;
+  flex-direction: column;
   max-width: 62.5rem;
   background: #000000;
   padding: 2rem;
@@ -57,16 +60,18 @@ p {
   margin: 1rem auto;
   align-items: center;
   border-radius: 5px;
+  overflow-x: auto;
 }
 
 .introducao-img{
   display: flex;
+  flex-wrap: nowrap;
   gap: 1rem;
   border-radius: 10px;
   align-items: center;
   background-color: #111111;
   padding: 1rem;
-  
+  overflow-x: scroll;
 }
 
 .introducao-img::-webkit-scrollbar {
@@ -78,10 +83,9 @@ p {
   border-radius: 5px;
 }
 
-
-
 .introducao-img img{
     height: 25rem;
+    max-width: 100%;
 
 }
 
@@ -109,6 +113,7 @@ p {
 
 .vantagens{
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   max-width: 62.5rem;
   margin: 1rem auto;
@@ -150,3 +155,40 @@ p {
   font-size: 2rem;
 }
 
+@media (max-width: 600px) {
+    menu ul{
+      flex-direction: column;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+
+    }
+
+    menu a{
+      margin: 0 1rem 0;
+    }
+
+    .conteudo, .introducao-img{
+      padding: 1rem;
+    }
+
+    .introducao-img img{
+      height: auto;
+      width: 100%;
+    }
+
+    .vantagens{
+      gap: 1rem;
+    }
+
+    .vantagens-lista{
+      padding: 1rem;
+    }
+
+    .introdução h2, .header, .vantagens-titulo{
+      font-size: 20px;
+      
+    }
+}
